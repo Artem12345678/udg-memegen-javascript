@@ -121,13 +121,44 @@ export default class Canvas {
       this.saveElement.addEventListener("click", e => {
         e.preventDefault();
 
-        const snapshot = this.canvasElement.toDataURL(this.mimeType);
+        let snapshot;
 
-        const markup = this.getSnapshotMarkup(snapshot);
+        if (this.mimeType === "image/gif") {
+          /* eslint-disable no-undef */
 
-        document
-          .querySelector(".app__results .row")
-          .insertAdjacentHTML("beforeend", markup);
+          const gif = new GIF({
+            workers: 2,
+            quality: 10
+          });
+
+          gif.addFrame(this.canvasElement, { delay: 200 });
+
+          gif.on("finished", blob => {
+            const reader = new FileReader();
+
+            reader.onload = () => {
+              snapshot = reader.result;
+
+              const markup = this.getSnapshotMarkup(snapshot);
+
+              document
+                .querySelector(".app__results .row")
+                .insertAdjacentHTML("beforeend", markup);
+            };
+
+            reader.readAsDataURL(blob);
+          });
+
+          gif.render();
+        } else {
+          snapshot = this.canvasElement.toDataURL(this.mimeType);
+
+          const markup = this.getSnapshotMarkup(snapshot);
+
+          document
+            .querySelector(".app__results .row")
+            .insertAdjacentHTML("beforeend", markup);
+        }
       });
     } else {
       console.error("DOM element with id #save is not found!");
