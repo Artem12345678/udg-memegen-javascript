@@ -11,18 +11,19 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta property="og:site_name" content="MemeGen">
-    <meta property="og:title" content="Home">
+    <meta property="og:title" content="MemeGen | Home">
     <meta property="og:description" content="Create a Meme">
     <meta property="og:image" content="url_to_page_image">
     <meta property="og:url" content="url_to_page_itself">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Home">
-    <meta name="twitter:description" content="Memegen">
+    <meta name="twitter:title" content="MemeGen | Home">
+    <meta name="twitter:description" content="Create a Meme">
     <meta name="twitter:image:src" content="url_to_page_image">
-    <title>Main Page</title>
-    <link href="https://fonts.googleapis.com/css?family=Pacifico&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>MemeGen | Home</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico&amp;display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- build:css  css/libs.min.css-->
+    <link rel="stylesheet" href="../node_modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.css">
     <!-- endbuild-->
     <link rel="stylesheet" href="css/style.min.css">
   </head>
@@ -40,93 +41,71 @@
       </div>
     </header>
     <main class="container">
+      <div class="googleFontFix">Fix</div>
       <div class="app">
         <div class="app__toolbar">
-          <div class="input-group mt-5">
-            <div class="input-group-prepend"><span class="input-group-text">Choose file</span></div>
-            <div class="custom-file">
-              <input class="custom-file-input" id="image" type="file" accept="image/jpeg,image/png,image/gif">
-              <label class="custom-file-label" for="#image">Click</label>
+          <div class="form-row">
+            <div class="input-group col-lg-4 mt-5">
+              <div class="input-group-prepend"><span class="input-group-text">File</span></div>
+              <div class="custom-file">
+                <input class="custom-file-input" id="image" type="file" accept="image/jpeg,image/png,image/gif">
+                <label class="custom-file-label" for="#image">Select</label>
+              </div>
+            </div>
+            <div class="input-group col-lg-4 mt-5">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="topText">Top Text</label>
+              </div>
+              <input class="form-control" id="topText" type="text" placeholder="Type text..." value="Start Of Debug">
+            </div>
+            <div class="input-group col-lg-4 mt-5">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="bottomText">Bottom Text</label>
+              </div>
+              <input class="form-control" id="bottomText" type="text" placeholder="Type text..." value="End Of Debug">
             </div>
           </div>
           <div class="form-row">
             <div class="input-group col-lg-4 mt-5">
               <div class="input-group-prepend">
-                <label class="input-group-text" for="font">Select a Font</label>
+                <label class="input-group-text" for="font">Font</label>
               </div>
               <select class="custom-select" id="font">
-                <option selected="" disabled>Choose...</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option disabled>Choose...</option>
+                <option selected value="Arial">Arial</option>
+                <option value="Comic Sans MS">Comic Sans MS</option>
+                <option value="Pacifico">Pacifico</option>
               </select>
             </div>
             <div class="input-group col-lg-4 mt-5">
               <div class="input-group-prepend">
-                <label class="input-group-text" for="color">Select a Color</label>
+                <label class="input-group-text" for="color">Color</label>
               </div>
-              <select class="custom-select" id="color">
-                <option selected="" disabled>Choose...</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
+              <input class="form-control" id="color" type="text" value="rgb(255, 128, 0)">
             </div>
             <div class="input-group col-lg-4 mt-5">
-              <div class="input-group-prepend">
-                <label class="input-group-text" for="fize">Select a Size</label>
-              </div>
-              <select class="custom-select" id="size">
-                <option selected="" disabled>Choose...</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
+              <label class="mr-2" for="size">Font Size</label>
+              <input class="custom-range" id="size" type="range" min="15" max="50" value="25" style="flex-grow: 1; width: auto">
             </div>
           </div>
         </div>
         <div class="app__canvas mt-5">
-          <div id="canvas"></div>
+          <canvas id="canvas" style="border: 1px solid blue"></canvas>
         </div>
-        <div class="app__results">
-          <div class="row mt-5">
-            <div class="col-md-4">
-              <div class="card mb-5"><img class="card-img-top" src="https://via.placeholder.com/100" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
-                  <button class="btn btn-success">Download</button>
-                  <button class="btn btn-danger">Delete</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 mb-5">
-              <div class="card"><img class="card-img-top" src="https://via.placeholder.com/100" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
-                  <button class="btn btn-success">Download</button>
-                  <button class="btn btn-danger">Delete</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 mb-5">
-              <div class="card"><img class="card-img-top" src="https://via.placeholder.com/100" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
-                  <button class="btn btn-success">Download</button>
-                  <button class="btn btn-danger">Delete</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 mb-5">
-              <div class="card"><img class="card-img-top" src="https://via.placeholder.com/100" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card&apos;s content.</p>
-                  <button class="btn btn-success">Download</button>
-                  <button class="btn btn-danger">Delete</button>
-                </div>
-              </div>
+        <div class="app__save"> 
+          <div class="input-group mt-5 col-lg-6">
+            <select class="custom-select" id="mime">
+              <option disabled>Choose...</option>
+              <option selected value="image/jpeg">JPG</option>
+              <option value="image/png">PNG</option>
+            </select>
+            <div class="input-group-append">
+              <button class="btn btn-info" id="save">Save As</button>
             </div>
           </div>
+        </div>
+        <div class="app__results">
+          <div class="row mt-5"></div>
         </div>
       </div>
     </main>
@@ -152,6 +131,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed-->
     <!-- build:js  js/libs.min.js-->
+    <script src="../node_modules/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.js"></script>
     <!-- endbuild-->
     <script src="js/script.min.js"></script>
   </body>

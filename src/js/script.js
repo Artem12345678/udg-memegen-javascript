@@ -1,13 +1,8 @@
-import testFunc from "./modules/testFunc";
-import testClassDefault, { Test as testClass } from "./modules/testClass";
+import Canvas from "./modules/canvas";
 
 (function wrapper($) {
   $(document).ready(() => {
-    testFunc();
-    testClassDefault.output();
-
-    testClass.asynchron();
-
-    console.log("test from main file");
+    /* eslint-disable no-unused-vars */
+    const app = new Canvas("canvas");
   });
 })(jQuery);

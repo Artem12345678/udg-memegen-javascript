@@ -13,91 +13,72 @@ include ../modules/footer.pug
 
 block share
   meta(property="og:site_name" content="MemeGen")
-  meta(property="og:title" content="Home")
+  meta(property="og:title" content="MemeGen | Home")
   meta(property="og:description" content="Create a Meme")
   meta(property="og:image" content="url_to_page_image")
   meta(property="og:url" content="url_to_page_itself")
   meta(name="twitter:card" content="summary_large_image")
-  meta(name="twitter:title" content="Home")
-  meta(name="twitter:description" content="Memegen")
+  meta(name="twitter:title" content="MemeGen | Home")
+  meta(name="twitter:description" content="Create a Meme")
   meta(name="twitter:image:src" content="url_to_page_image")
 
 block title 
-  title Main Page
+  title MemeGen | Home
 
 block content
   main.container
+    .googleFontFix Fix
+
     .app
       .app__toolbar
-        .input-group.mt-5
-          .input-group-prepend
-            span.input-group-text Choose file
-          .custom-file
-            input#image.custom-file-input(type='file' accept="image/jpeg,image/png,image/gif")
-            label.custom-file-label(for='#image') Click
+        .form-row
+          .input-group.col-lg-4.mt-5
+            .input-group-prepend
+              span.input-group-text File
+            .custom-file
+              input#image.custom-file-input(type='file' accept="image/jpeg,image/png,image/gif")
+              label.custom-file-label(for='#image') Select
+          .input-group.col-lg-4.mt-5
+            .input-group-prepend
+              label.input-group-text(for='topText') Top Text
+            input#topText.form-control(type="text" placeholder="Type text..." value="Start Of Debug")
+          .input-group.col-lg-4.mt-5
+            .input-group-prepend
+              label.input-group-text(for='bottomText') Bottom Text
+            input#bottomText.form-control(type="text" placeholder="Type text..." value="End Of Debug")
 
         .form-row
           .input-group.col-lg-4.mt-5
             .input-group-prepend
-              label.input-group-text(for='font') Select a Font
+              label.input-group-text(for='font') Font
             select#font.custom-select
-              option(selected='' disabled) Choose...
-              option(value='1') One
-              option(value='2') Two
-              option(value='3') Three
+              option(disabled) Choose...
+              option(selected value='Arial') Arial
+              option(value='Comic Sans MS') Comic Sans MS
+              option(value='Pacifico') Pacifico
 
           .input-group.col-lg-4.mt-5
             .input-group-prepend
-              label.input-group-text(for='color') Select a Color
-            select#color.custom-select
-              option(selected='' disabled) Choose...
-              option(value='1') One
-              option(value='2') Two
-              option(value='3') Three
+              label.input-group-text(for='color') Color
+            input#color(type="text" class="form-control" value="rgb(255, 128, 0)" )
 
           .input-group.col-lg-4.mt-5
-            .input-group-prepend
-              label.input-group-text(for='fize') Select a Size
-            select#size.custom-select
-              option(selected='' disabled) Choose...
-              option(value='1') One
-              option(value='2') Two
-              option(value='3') Three
+            label(for='size').mr-2 Font Size
+            input#size.custom-range(type='range' min="15" max="50" value="25" style="flex-grow: 1; width: auto")
 
       .app__canvas.mt-5
-        #canvas
+        canvas#canvas(style='border: 1px solid blue' )
+
+      .app__save 
+        .input-group.mt-5.col-lg-6
+          select#mime.custom-select
+            option(disabled) Choose...
+            option(selected value='image/jpeg') JPG
+            option(value='image/png') PNG
+            //- option(value='image/gif') GIF
+          .input-group-append
+            button#save.btn.btn-info Save As
+
       .app__results
         .row.mt-5
-          .col-md-4
-            .card.mb-5
-              img.card-img-top(src='https://via.placeholder.com/100' alt='Card image cap')
-              .card-body
-                p.card-text
-                  | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
-                button.btn.btn-success Download
-                button.btn.btn-danger Delete
-          .col-md-4.mb-5
-            .card
-              img.card-img-top(src='https://via.placeholder.com/100' alt='Card image cap')
-              .card-body
-                p.card-text
-                  | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
-                button.btn.btn-success Download
-                button.btn.btn-danger Delete
-          .col-md-4.mb-5
-            .card
-              img.card-img-top(src='https://via.placeholder.com/100' alt='Card image cap')
-              .card-body
-                p.card-text
-                  | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
-                button.btn.btn-success Download
-                button.btn.btn-danger Delete
-          .col-md-4.mb-5
-            .card
-              img.card-img-top(src='https://via.placeholder.com/100' alt='Card image cap')
-              .card-body
-                p.card-text
-                  | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
-                button.btn.btn-success Download
-                button.btn.btn-danger Delete
 
