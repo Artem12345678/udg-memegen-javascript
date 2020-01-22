@@ -9,13 +9,20 @@
 }
 
 html {
-  font-size: 62.5%;
+  // font-size: 62.5%;
 }
 
 body {
-  font-family: $ff-os;
-  font-size: 1.6rem;
-  font-weight: 300;
+  // font-family: $ff-os;
+  // font-size: 1.6rem;
+  // font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
 }
 
 img {

@@ -2,15 +2,9 @@ mixin nav(itemsArray, modifiersArray)
   - var modifiers = modifiersArray || []; 
   - var items = itemsArray || [];
   - modifiersString = modifiers.map(function (modifier) {
-  -     return 'nav--' + modifier;
+  -     return 'nav-link--' + modifier;
   -   }).join(' ');
 
-  ul.nav(class= modifiersString) 
-    each item in items
-      li.nav__item
-        a.nav__link(href= item.link) #{item.name}
-        if item.dropdown
-          ul.nav__dropdown
-            each dropdown in item.dropdown
-              li.nav__item
-                a.nav__link(href= dropdown.link) #{dropdown.name}
+  each item in items
+    li.nav-item
+      a.nav-link(href= item.link class =modifiersString) #{item.name}

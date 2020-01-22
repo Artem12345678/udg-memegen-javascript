@@ -25,7 +25,9 @@
 //         'layout/_l-helpers';
 
 // Modules
-@import 'modules/_m-header',
+@import 
+        'modules/_m-app',
+        'modules/_m-header',
         'modules/_m-navbar',
         'modules/_m-nav',
         'modules/_m-social',

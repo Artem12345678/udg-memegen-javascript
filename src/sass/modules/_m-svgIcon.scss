@@ -6,7 +6,7 @@
       display: inline-block;
       background-image: url("../img/svgIcons.svg");
       background-repeat: no-repeat;
-      background-size: 1.05em 2.55em;
+      background-size: 0.9em 1.8em;
 
       .no-svg & {
         background-image: url("../svgIcons.png");
@@ -17,16 +17,16 @@
 
 
 
-.svgIcon.svgIcon--facebook {
+.svgIcon.svgIcon--github {
   &:before {
       background-position: 0em 0em;
-      width: 0.55em;
+      width: 0.9em;
       height: 0.9em;
     }
   }
 
-  @mixin svgIcon-svgIcon--facebook(){
-    @extend .svgIcon--facebook;
+  @mixin svgIcon-svgIcon--github(){
+    @extend .svgIcon--github;
   }
 
 
@@ -40,19 +40,6 @@
 
   @mixin svgIcon-svgIcon--instagram(){
     @extend .svgIcon--instagram;
-  }
-
-
-.svgIcon.svgIcon--twitter {
-  &:before {
-      background-position: 0em -1.8em;
-      width: 1.05em;
-      height: 0.75em;
-    }
-  }
-
-  @mixin svgIcon-svgIcon--twitter(){
-    @extend .svgIcon--twitter;
   }
 
 

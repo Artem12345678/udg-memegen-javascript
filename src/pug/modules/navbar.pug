@@ -1,28 +1,11 @@
 mixin navbar()
-    nav.navbar
-      .navbar__header
-        a.navbar__brand(href="#")
-          +brand()
-        .navbar__toggle
-          +burger()
-      .navbar__nav
-        +nav([ 
-              { link: '/index.html', name: 'home', dropdown: [ 
-                  { link: '/jackets.html', name: 'jackets' }, 
-                  { link: '/blazers.html', name: 'blazers' },
-                  { link: '/suits.html', name: 'suits' },
-                  { link: '/trousers.html', name: 'trousers' },
-                  { link: '/jeans.html', name: 'jeans' },
-                  { link: '/shirts.html', name: 'shirts' },
-                ]
-              }, 
-              { link: '#whatIDo', name: 'what i do' }, 
-              { link: '#works', name: 'my works' }, 
-              { link: '#about', name: 'about' },
-              { link: '#contact', name: 'contact' } 
-            ])
-        +social([ 
-            { link: 'facebook.com', name: 'facebook' }, 
-            { link: 'instagram.com', name: 'instagram' }, 
-            { link: 'twitter.com', name: 'twitter' } 
-          ])
+    nav.navbar.navbar-expand-lg.navbar-dark
+      a.navbar-brand(href="/index.html")
+        +brand()
+      button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+      #navbarContent.collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+          +nav([ 
+                { link: '/index.html', name: 'Home' },
+                ])

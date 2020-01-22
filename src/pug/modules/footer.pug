@@ -1,14 +1,14 @@
 mixin footer()
-  footer.footer
+  footer.footer.bg-secondary
     .container
       .footer__nav 
-        +nav([ 
-              { link: '/legal.html', name: 'LEGAL INFORMATION' }, 
-              { link: '/terms.html', name: 'TERMS' }, 
-              { link: '/privacy.html', name: 'DATA PRIVACY'}, 
-              { link: '/sizing.html', name: 'SIZING' },
-              { link: '/shipping.html', name: 'SHIPPING' },
-              { link: '/contact.html', name: 'CONTACT' }
+        ul.nav
+          +nav([ 
+                { link: '/index.html', name: 'Home' },
+                ],
+                ['footer'])
+        .footer__social
+          +social([ 
+              { link: 'github.com', name: 'github' },
+              { link: 'instagram.com/ystimenkoartem', name: 'instagram'}
             ])
-      .footer__social
-        +social([ {link: 'facebook.com', name: 'facebook'}, {link: 'instagram.com', name: 'instagram'}, {link: 'twitter.com', name: 'twitter'} ], 'svgIcon')

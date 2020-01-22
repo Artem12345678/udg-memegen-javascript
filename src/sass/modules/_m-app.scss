@@ -1,0 +1,13 @@
+// =======================
+// Module/App
+// =======================
+
+.app {
+  &__canvas {
+    border: 2px solid red;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

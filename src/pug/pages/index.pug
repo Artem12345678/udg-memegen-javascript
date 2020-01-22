@@ -12,17 +12,92 @@ include ../modules/button.pug
 include ../modules/footer.pug
 
 block share
-  meta(property="og:site_name" content="Memes Generator")
-  meta(property="og:title" content="Main Page")
+  meta(property="og:site_name" content="MemeGen")
+  meta(property="og:title" content="Home")
   meta(property="og:description" content="Create a Meme")
   meta(property="og:image" content="url_to_page_image")
   meta(property="og:url" content="url_to_page_itself")
   meta(name="twitter:card" content="summary_large_image")
-  meta(name="twitter:title" content="Main Page")
-  meta(name="twitter:description" content="Create a Meme")
+  meta(name="twitter:title" content="Home")
+  meta(name="twitter:description" content="Memegen")
   meta(name="twitter:image:src" content="url_to_page_image")
 
 block title 
   title Main Page
 
 block content
+  main.container
+    .app
+      .app__toolbar
+        .input-group.mt-5
+          .input-group-prepend
+            span.input-group-text Choose file
+          .custom-file
+            input#image.custom-file-input(type='file' accept="image/jpeg,image/png,image/gif")
+            label.custom-file-label(for='#image') Click
+
+        .form-row
+          .input-group.col-lg-4.mt-5
+            .input-group-prepend
+              label.input-group-text(for='font') Select a Font
+            select#font.custom-select
+              option(selected='' disabled) Choose...
+              option(value='1') One
+              option(value='2') Two
+              option(value='3') Three
+
+          .input-group.col-lg-4.mt-5
+            .input-group-prepend
+              label.input-group-text(for='color') Select a Color
+            select#color.custom-select
+              option(selected='' disabled) Choose...
+              option(value='1') One
+              option(value='2') Two
+              option(value='3') Three
+
+          .input-group.col-lg-4.mt-5
+            .input-group-prepend
+              label.input-group-text(for='fize') Select a Size
+            select#size.custom-select
+              option(selected='' disabled) Choose...
+              option(value='1') One
+              option(value='2') Two
+              option(value='3') Three
+
+      .app__canvas.mt-5
+        #canvas
+      .app__results
+        .row.mt-5
+          .col-md-4
+            .card.mb-5
+              img.card-img-top(src='https://via.placeholder.com/100' alt='Card image cap')
+              .card-body
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                button.btn.btn-success Download
+                button.btn.btn-danger Delete
+          .col-md-4.mb-5
+            .card
+              img.card-img-top(src='https://via.placeholder.com/100' alt='Card image cap')
+              .card-body
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                button.btn.btn-success Download
+                button.btn.btn-danger Delete
+          .col-md-4.mb-5
+            .card
+              img.card-img-top(src='https://via.placeholder.com/100' alt='Card image cap')
+              .card-body
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                button.btn.btn-success Download
+                button.btn.btn-danger Delete
+          .col-md-4.mb-5
+            .card
+              img.card-img-top(src='https://via.placeholder.com/100' alt='Card image cap')
+              .card-body
+                p.card-text
+                  | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
+                button.btn.btn-success Download
+                button.btn.btn-danger Delete
+

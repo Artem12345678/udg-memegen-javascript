@@ -3,23 +3,29 @@
 // =======================
 
 .social {
-  display: inline-block;
-
-  vertical-align: middle;
+  display: flex;
 
   &__item {
     position: relative;
     z-index: 1;
 
     display: inline-block;
+
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &__link {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     width: 28px;
     height: 28px;
-    margin-right: 10px;
+
 
     transition: border-color 0.25s ease-in-out;
     text-align: center;
@@ -27,14 +33,11 @@
     border: 1px solid transparent;
     border-radius: 50%;
 
-    &:last-child {
-      margin-right: 0;
-    }
 
     &:hover,
     &:focus,
     &:active {
-      border-color: #838d8f;
+      border-color: $light;
     }
   }
 }
