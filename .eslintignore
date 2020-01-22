@@ -1,0 +1,14 @@
+# Bower dependency directory (https://bower.io/)
+bower_components
+
+# Dependency directories
+node_modules
+
+# Dist directory
+dist
+
+# Gulp directory
+gulp
+
+# Gulpfile
+gulpfile.js

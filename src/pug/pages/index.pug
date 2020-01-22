@@ -1,0 +1,28 @@
+extends ../layout/main.pug
+
+include ../modules/header.pug
+include ../modules/navbar.pug
+include ../modules/nav.pug
+include ../modules/burger.pug
+include ../modules/social.pug
+include ../modules/brand.pug
+include ../modules/heading.pug
+include ../modules/text.pug
+include ../modules/button.pug
+include ../modules/footer.pug
+
+block share
+  meta(property="og:site_name" content="Memes Generator")
+  meta(property="og:title" content="Main Page")
+  meta(property="og:description" content="Create a Meme")
+  meta(property="og:image" content="url_to_page_image")
+  meta(property="og:url" content="url_to_page_itself")
+  meta(name="twitter:card" content="summary_large_image")
+  meta(name="twitter:title" content="Main Page")
+  meta(name="twitter:description" content="Create a Meme")
+  meta(name="twitter:image:src" content="url_to_page_image")
+
+block title 
+  title Main Page
+
+block content

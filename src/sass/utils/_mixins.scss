@@ -1,0 +1,23 @@
+// =======================
+// Config/Mixins
+// =======================
+
+@mixin add-font($font-url, $font-name, $weight: normal, $style: normal) {
+  font-family: $font-name;
+  font-weight: $weight;
+  font-style: $style;
+
+  src: url('../fonts/#{$font-url}.eot'); // IE9 Compat Modes   
+  src: url('../fonts/#{$font-url}.eot?#iefix') format('embedded-opentype'), // IE6-IE8 
+  url('../fonts/#{$font-url}.woff') format('woff'), // Pretty Modern Browsers 
+  url('../fonts/#{$font-url}.ttf') format('truetype'), // Safari, Android, iOS 
+  url('../fonts/#{$font-url}.svg##{$font-name}') format('svg'); // Legacy iOS   
+}
+
+@mixin bg-image($img, $pos: center, $att: scroll) {
+  background-image: url('../img/#{$img}');
+  background-repeat: no-repeat;
+  background-attachment: $att;
+  background-position: $pos;
+  background-size: cover;
+}

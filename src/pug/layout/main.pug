@@ -1,0 +1,47 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    //- meta(http-equiv="X-UA-Compatible" content="IE=edge")  --- DEPRECATED STARTING WITH IE11
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    //- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+    meta(name="description", content="memes generator")
+    meta(name="keywords", content="memes generator")
+    meta(name="author" content="Artem Ustymenko")
+    //- Styling of tab header on mobile devices:
+    //- Chrome, Firefox OS and Opera
+    meta(name="theme-color" content="")
+    //- Windows Phone
+    meta(name="msapplication-navbutton-color" content="")
+    //- iOS Safari
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+    //- Social media share meta
+    block share
+    block title
+    link(href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
+    // build:css  css/libs.min.css
+    // endbuild
+    link(rel="stylesheet" href="css/style.min.css")
+   
+  body
+    block header
+      +header()
+
+    block content
+
+    block footer
+      +footer()
+
+    // jQuery (necessary for Bootstrap)
+    script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous")
+    // popper (necessary for Bootstrap)
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous")
+    // Include all compiled plugins (below), or include individual files as needed
+  
+    // build:js  js/libs.min.js
+    // endbuild
+    script(src="js/script.min.js")
+

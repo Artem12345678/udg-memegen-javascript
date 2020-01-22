@@ -1,0 +1,12 @@
+mixin social(itemsArray, typeString, modifiersArray)
+  - var modifiers = modifiersArray || []; 
+  - var items = itemsArray || [];
+  - var type = typeString || 'svgIcon';
+  - modifiersString = modifiers.map(function (modifier) {
+  -     return 'social--' + modifier;
+  -   }).join(' ');
+      
+  ul.social(class= modifiersString) 
+    each item in items
+      li.social__item
+        a.social__link(href="https://" + item.link class= type + ' ' + type + '--' + item.name)

@@ -1,0 +1,32 @@
+// =======================
+// States/Burger
+// =======================
+
+.burger {
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--active {
+    .burger__line {
+      background-color: transparent;
+
+      &::before,
+      &::after {
+        transition: top 0.25s ease, transform 0.25s ease 0.5s;
+      }
+
+      &::before {
+        top: 0;
+
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        top: 0;
+
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

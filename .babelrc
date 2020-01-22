@@ -1,0 +1,8 @@
+{
+  "presets": [
+    ["airbnb", {
+      "targets": "last 3 versions",
+      "modules": false
+    }]
+  ]
+}

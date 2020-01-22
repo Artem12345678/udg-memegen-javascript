@@ -1,0 +1,42 @@
+// =======================
+// Module/Button
+// =======================
+
+.button {
+  display: flex;
+
+  box-sizing: border-box;
+  padding: 5px 15px;
+
+  transition: background-color 0.25s ease-in-out;
+
+  border: 1px solid $gray;
+  border-radius: 4px;
+
+  justify-content: space-between;
+  align-items: center;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $light;
+
+    .button__text {
+      color: $gray;
+    }
+  }
+
+  &__text {
+    font-size: 10px;
+    line-height: 12px;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: $light;
+  }
+
+  &__icon {
+    margin-right: 20px;
+  }
+}

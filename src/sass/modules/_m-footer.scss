@@ -1,0 +1,15 @@
+// =======================
+// Module/Footer
+// =======================
+
+.footer {
+  padding: 30px 0;
+
+  background-color: $secondary;
+
+  &__copyright {
+    margin-bottom: 30px;
+
+    text-align: center;
+  }
+}

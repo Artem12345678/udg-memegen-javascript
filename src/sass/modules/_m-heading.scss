@@ -1,0 +1,57 @@
+// =======================
+// Module/Heading
+// =======================
+
+.heading {
+  font-weight: 700;
+
+  color: $dark;
+
+  &--hero {
+    font-size: 52px;
+    line-height: 62.4px;
+
+    margin: 0;
+
+    letter-spacing: -1.04px;
+  }
+
+  &--widget {
+    font-size: 16px;
+    line-height: 19.2px;
+
+    margin: 0;
+
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+  }
+
+  &--panel {
+    font-size: 16px;
+    line-height: 19.2px;
+
+    margin: 0;
+
+    transition: color 0.25s ease-in-out;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $primary;
+    }
+  }
+
+  &--product {
+    margin-bottom: 0;
+
+    transition: color 0.25s ease-in-out;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $primary;
+    }
+  }
+}

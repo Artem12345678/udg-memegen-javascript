@@ -1,0 +1,87 @@
+// =======================
+// Module/Nav
+// =======================
+
+.nav {
+  display: flex;
+
+  width: 100%;
+
+  text-align: center;
+
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &__link {
+    font-size: 14px;
+    line-height: 32.5px;
+
+    display: inline-block;
+
+    transition: 0.25s ease-in-out;
+    letter-spacing: 1.17px;
+    text-transform: uppercase;
+
+    color: $dark;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $primary;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    display: inline-block;
+
+    margin: 0 17px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      .nav__dropdown {
+        visibility: visible;
+
+        opacity: 1;
+      }
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    z-index: 2;             /* 2 because social in starter pack has 1 and overlaps my dropdown */
+    left: 50%;
+
+    visibility: hidden;
+
+    min-width: 100%;
+
+    transition: opacity 0.25s ease-in-out;
+    transform: translateX(-50%);
+
+    opacity: 0;
+    background-color: #838d8f;
+
+    .nav__link {
+      color: $light;
+    }
+
+    @media (min-width: 768px) {
+      background-color: $light;
+
+      .nav__link {
+        color: $dark;
+      }
+    }
+  }
+
+  &--header {
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+}

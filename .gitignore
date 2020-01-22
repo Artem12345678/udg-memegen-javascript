@@ -1,0 +1,21 @@
+# Created by https://www.gitignore.io/
+
+# Bower dependency directory (https://bower.io/)
+bower_components
+
+# Dependency directories
+node_modules
+
+# Dist directory
+dist
+
+# VSCode directory
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history
+
+# misc
+.DS_Store
