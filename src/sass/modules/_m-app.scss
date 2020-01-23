@@ -3,11 +3,15 @@
 // =======================
 
 .app {
+  &__control {
+    margin-top: 1.5rem;
+  }
+
   &__canvas {
     display: flex;
 
-    padding: 20px;
     margin-top: 1rem;
+    padding: 20px;
 
     justify-content: center;
     align-items: center;
@@ -20,16 +24,7 @@
     justify-content: center;
   }
 
-  &__control {
-    margin-top: 1.5rem;
-  }
-
   &__results {
     margin-top: 2.5rem;
-  }
-
-  #canvas {
-    max-width: 100%;
-    max-height: 100%;
   }
 }

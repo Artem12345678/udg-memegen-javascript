@@ -1,3 +1,17 @@
 // =======================
 // States/Nav
 // =======================
+
+.nav {
+  &-link {
+    &--footer {
+      color: $light;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: darken($light, 10%);
+      }
+    }
+  }
+}

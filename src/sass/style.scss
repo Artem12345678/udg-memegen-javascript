@@ -1,9 +1,9 @@
 /*!
-    Project: -- PROJECT NAME --
+    Project:      udg-javascript
     Author:       Artem Ustymenko
     Author URI:   https://instagram.com/ystimenkoartem/
     Version:      1.0.0
-    Grid: -- GRID TYPE -- (CSSGrid, ReFlex etc)
+    Grid:         Bootstrap
 */
 
 @charset 'UTF-8';
@@ -15,35 +15,20 @@
         'utils/_fonts';
 
 // Base
-@import 'base/_normalize',
-        'base/_defaults';
-
-// Layout
-// @import 'layout/_l-variables',
-//         'layout/_l-mixins',
-//         'layout/_l-grid',
-//         'layout/_l-helpers';
+@import 'base/_defaults';
 
 // Modules
-@import 
-        'modules/_m-app',
+@import 'modules/_m-app',
         'modules/_m-header',
-        'modules/_m-navbar',
         'modules/_m-nav',
         'modules/_m-social',
         'modules/_m-brand',
-        'modules/_m-burger',
         'modules/_m-svgIcon',
         'modules/_m-pngIcon',
-        'modules/_m-button',
-        'modules/_m-text',
-        'modules/_m-heading',
         'modules/_m-footer';
 
 // States
 @import 'states/_s-brand',
-        'states/_s-burger',
         'states/_s-footer',
         'states/_s-nav',
-        'states/_s-navbar',
         'states/_s-social';

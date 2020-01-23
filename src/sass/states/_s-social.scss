@@ -1,3 +1,13 @@
 // =======================
 // States/Social
 // =======================
+
+.social {
+  &__link {
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: $light;
+    }
+  }
+}

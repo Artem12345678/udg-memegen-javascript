@@ -115,7 +115,9 @@ export default class MemeGen {
             <input class="form-control" id="color" type="text" value="rgb(255, 128, 0)" name="fontColor" />
           </div>
           <div class="input-group col-lg-4 app__control">
-            <label class="mr-2" for="size">Font Size</label>
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="size">Font Size</label>
+            </div>
             <input class="custom-range" id="size" type="range" min="15" max="50" value="25" style="flex-grow: 1; width: auto;" name="fontSize" />
           </div>
       </div>
