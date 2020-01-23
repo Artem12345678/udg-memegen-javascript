@@ -9,4 +9,4 @@ mixin social(itemsArray, typeString, modifiersArray)
   ul.social(class= modifiersString) 
     each item in items
       li.social__item
-        a.social__link(href="https://" + item.link class= type + ' ' + type + '--' + item.name)
+        a.social__link(target="_blank" href="https://" + item.link class= type + ' ' + type + '--' + item.name)

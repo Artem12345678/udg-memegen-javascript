@@ -4,15 +4,32 @@
 
 .app {
   &__canvas {
-    display: flex;  padding: 20px;
- justify-content: center;  align-items: center; 
+    display: flex;
+
+    padding: 20px;
+    margin-top: 1rem;
+
+    justify-content: center;
+    align-items: center;
   }
 
   &__save {
-    display: flex;  align-items: center;  justify-content: center;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__control {
+    margin-top: 1.5rem;
+  }
+
+  &__results {
+    margin-top: 2.5rem;
   }
 
   #canvas {
-    max-width: 100%;  max-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
   }
 }

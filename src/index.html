@@ -6,8 +6,8 @@
     <meta name="description" content="memes generator">
     <meta name="keywords" content="memes generator">
     <meta name="author" content="Artem Ustymenko">
-    <meta name="theme-color" content="">
-    <meta name="msapplication-navbutton-color" content="">
+    <meta name="theme-color" content="#007bff">
+    <meta name="msapplication-navbutton-color" content="#007bff">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta property="og:site_name" content="MemeGen">
@@ -42,73 +42,7 @@
     </header>
     <main class="container">
       <div class="googleFontFix">Fix</div>
-      <div class="app">
-        <div class="app__toolbar">
-          <div class="form-row">
-            <div class="input-group col-lg-4 mt-4">
-              <div class="input-group-prepend"><span class="input-group-text">File</span></div>
-              <div class="custom-file">
-                <input class="custom-file-input" id="image" type="file" accept="image/jpeg,image/png,image/gif">
-                <label class="custom-file-label" for="#image">Select</label>
-              </div>
-            </div>
-            <div class="input-group col-lg-4 mt-4">
-              <div class="input-group-prepend">
-                <label class="input-group-text" for="topText">Top Text</label>
-              </div>
-              <input class="form-control" id="topText" type="text" placeholder="Type text..." value="Start Of Debug">
-            </div>
-            <div class="input-group col-lg-4 mt-4">
-              <div class="input-group-prepend">
-                <label class="input-group-text" for="bottomText">Bottom Text</label>
-              </div>
-              <input class="form-control" id="bottomText" type="text" placeholder="Type text..." value="End Of Debug">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="input-group col-lg-4 mt-4">
-              <div class="input-group-prepend">
-                <label class="input-group-text" for="font">Font</label>
-              </div>
-              <select class="custom-select" id="font">
-                <option disabled>Choose...</option>
-                <option selected value="Arial">Arial</option>
-                <option value="Comic Sans MS">Comic Sans MS</option>
-                <option value="Pacifico">Pacifico</option>
-              </select>
-            </div>
-            <div class="input-group col-lg-4 mt-4">
-              <div class="input-group-prepend">
-                <label class="input-group-text" for="color">Color</label>
-              </div>
-              <input class="form-control" id="color" type="text" value="rgb(255, 128, 0)">
-            </div>
-            <div class="input-group col-lg-4 mt-4">
-              <label class="mr-2" for="size">Font Size</label>
-              <input class="custom-range" id="size" type="range" min="15" max="50" value="25" style="flex-grow: 1; width: auto">
-            </div>
-          </div>
-        </div>
-        <div class="app__canvas mt-4">
-          <canvas id="canvas"></canvas>
-        </div>
-        <div class="app__save"> 
-          <div class="input-group mt-4 col-lg-6">
-            <select class="custom-select" id="mime">
-              <option disabled>Choose...</option>
-              <option selected value="image/jpeg">JPG</option>
-              <option value="image/png">PNG</option>
-              <option value="image/gif">GIF</option>
-            </select>
-            <div class="input-group-append">
-              <button class="btn btn-info" id="save">Save As</button>
-            </div>
-          </div>
-        </div>
-        <div class="app__results">
-          <div class="row mt-4"></div>
-        </div>
-      </div>
+      <div id="app"></div>
     </main>
     <footer class="footer bg-secondary">
       <div class="container">
@@ -118,8 +52,8 @@
           </ul>
           <div class="footer__social">
             <ul class="social"> 
-              <li class="social__item"><a class="social__link svgIcon svgIcon--github" href="https://github.com"></a></li>
-              <li class="social__item"><a class="social__link svgIcon svgIcon--instagram" href="https://instagram.com/ystimenkoartem"></a></li>
+              <li class="social__item"><a class="social__link svgIcon svgIcon--github" target="_blank" href="https://github.com/Artem12345678"></a></li>
+              <li class="social__item"><a class="social__link svgIcon svgIcon--instagram" target="_blank" href="https://instagram.com/ystimenkoartem"></a></li>
             </ul>
           </div>
         </div>
