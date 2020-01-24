@@ -12,3 +12,7 @@ gulp
 
 # Gulpfile
 gulpfile.js
+
+# gif.js
+gif.js
+gif.worker.js

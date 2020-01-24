@@ -112,7 +112,7 @@ export default class MemeGen {
             <div class="input-group-prepend">
               <label class="input-group-text" for="color">Color</label>
             </div>
-            <input class="form-control" id="color" type="text" value="rgb(255, 128, 0)" name="fontColor" />
+            <input class="form-control" id="color" readonly type="text" value="rgb(255, 128, 0)" name="fontColor" />
           </div>
           <div class="input-group col-lg-4 app__control">
             <div class="input-group-prepend">
